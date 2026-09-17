@@ -1,11 +1,1 @@
-<h1>Familie Van Boggelen</h1>
-2
-<p>Gezinsdashboard</p>
-3
-<p>Apple Calendar komt hier</p>
-4
-<p>Lek & Linge komt hier</p>
-5
-<p>Cals College komt hier</p>
-6
-<p>NS Houten → Culemborg komt hier</p>
+<!DOCTYPE html> <html lang="nl"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Familie Van Boggelen Dashboard</title> <style> *{ margin:0; padding:0; box-sizing:border-box; } body{ background:#071330; color:white; font-family:Segoe UI, Arial, sans-serif; overflow:hidden; } header{ background:#1a2945; text-align:center; padding:25px; } header h1{ font-size:48px; } #clock{ font-size:28px; margin-top:15px; } .slide{ display:none; height:calc(100vh - 140px); padding:40px; } .slide.active{ display:block; } .card{ background:#1a2945; border-radius:20px; padding:30px; max-width:1000px; margin:auto; } .card h2{ margin-bottom:25px; } .card ul{ list-style:none; } .card li{ font-size:28px; margin-bottom:15px; } </style> </head> <body> <header> <h1>🏠 Familie Van Boggelen</h1> <div id="clock"></div> </header> <div class="slide active"> <div class="card"> <h2>📅 Vandaag</h2> <ul> <li>Apple Agenda volgt</li> <li>Gezinsafspraken</li> <li>Verjaardagen</li> </ul> </div> </div> <div class="slide"> <div class="card"> <h2>🎓 Lek & Linge</h2> <ul> <li>Rooster volgt</li> <li>Huiswerk volgt</li> <li>Toetsen volgen</li> </ul> </div> </div> <div class="slide"> <div class="card"> <h2>🎓 Cals College</h2> <ul> <li>Rooster volgt</li> <li>Huiswerk volgt</li> <li>Toetsen volgen</li> </ul> </div> </div> <div class="slide"> <div class="card"> <h2>🚆 NS Houten → Culemborg</h2> <ul> <li>Vertrektijden volgen</li> <li>Vertragingen volgen</li> <li>Storingen volgen</li> </ul> </div> </div> <div class="slide"> <div class="card"> <h2>📆 Komende Week</h2> <ul> <li>Weekoverzicht volgt</li> </ul> </div> </div> <script> function updateClock() { document.getElementById("clock").innerHTML = new Date().toLocaleString("nl-NL"); } setInterval(updateClock,1000); updateClock(); const slides = document.querySelectorAll(".slide"); let currentSlide = 0; setInterval(function(){ slides[currentSlide].classList.remove("active"); currentSlide++; if(currentSlide >= slides.length){ currentSlide = 0; } slides[currentSlide].classList.add("active"); },10000); </script> </body> </html>
