@@ -1,14 +1,61 @@
-🏠 Familie Van Boggelen
-Gezinsdashboard
-
-📅 Vandaag
-Apple Calendar komt hier.
-
-🎓 Lek & Linge
-Rooster komt hier.
-
-🎓 Cals College
-Rooster komt hier.
-
-🚆 NS Houten → Culemborg
-Treininformatie komt hier.
+let currentSlide = 0;
+2
+ 
+3
+const slides = document.querySelectorAll(".slide");
+4
+ 
+5
+setInterval(() => {
+6
+ 
+7
+slides[currentSlide].classList.remove("active");
+8
+ 
+9
+currentSlide =
+10
+(currentSlide + 1) % slides.length;
+11
+ 
+12
+slides[currentSlide].classList.add("active");
+13
+ 
+14
+}, 10000);
+15
+ 
+16
+function updateClock(){
+17
+ 
+18
+const now = new Date();
+19
+ 
+20
+document.getElementById("clock").innerHTML =
+21
+now.toLocaleDateString("nl-NL") +
+22
+" " +
+23
+now.toLocaleTimeString("nl-NL");
+24
+}
+25
+ 
+26
+setInterval(updateClock,1000);
+27
+ 
+28
+updateClock();
+29
+ 
+30
+document.getElementById("familyName").innerText =
+31
+CONFIG.familyName;
