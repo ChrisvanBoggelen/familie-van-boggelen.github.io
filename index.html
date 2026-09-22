@@ -2,83 +2,46 @@
 <html lang="nl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Familie van Boggelen</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Familie van Boggelen Dashboard</title>
  
 <style>
 body {
-font-family: Arial, sans-serif;
-background: #eef2f7;
 margin: 0;
-padding: 20px;
+background: black;
+color: #00ff66;
+font-family: Arial, sans-serif;
+overflow: hidden;
 }
  
-.header {
-background: #003366;
-color: white;
-text-align: center;
-padding: 20px;
-border-radius: 15px;
+.ticker {
+position: absolute;
+white-space: nowrap;
+font-size: 2em;
+padding-top: 40px;
+animation: scroll 30s linear infinite;
 }
  
-.grid {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-gap: 15px;
-margin-top: 20px;
+@keyframes scroll {
+from {
+transform: translateX(100%);
 }
- 
-.tegel {
-display: block;
-background: white;
-color: #003366;
-text-decoration: none;
-text-align: center;
-padding: 25px;
-border-radius: 15px;
-font-size: 22px;
-font-weight: bold;
-box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+to {
+transform: translateX(-100%);
 }
- 
-.tegel:hover {
-background: #dbe9ff;
 }
 </style>
 </head>
 <body>
  
-<div class="header">
-<h1>🏠 Familie van Boggelen</h1>
-<p>Familie Dashboard</p>
-</div>
- 
-<div class="grid">
- 
-<a class="tegel" href="https://www.ns.nl" target="_blank">
-🚆<br>NS
-</a>
- 
-<a class="tegel" href="https://accounts.magister.net" target="_blank">
-🎓<br>Magister
-</a>
- 
-<a class="tegel" href="https://calendar.google.com" target="_blank">
-📅<br>Agenda
-</a>
- 
-<a class="tegel" href="https://www.buienradar.nl" target="_blank">
-🌦️<br>Weer
-</a>
- 
-<div class="tegel">
-📷<br>Familiefoto's
-</div>
- 
-<div class="tegel">
-🔗<br>Handige Links
-</div>
- 
+<div class="ticker">
+🏠 Familie van Boggelen |
+🎓 Emma: morgen wiskunde |
+🎓 Lucas: geschiedenis vrijdag |
+📅 Ouderavond 19:00 |
+🚆 Houten → Culemborg |
+🌦️ Weer bekijken |
+✅ Website werkt!
 </div>
  
 </body>
